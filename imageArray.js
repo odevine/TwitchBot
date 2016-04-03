@@ -1,4 +1,4 @@
-var imageArray = [
+var urlArray = [
 
 	'http://imgur.com/isk7S1C',
 	'http://imgur.com/2M5rKpu',
