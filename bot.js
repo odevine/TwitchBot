@@ -35,14 +35,14 @@ function respond() {
                 console.log('posted!');
             }, 500);
             this.res.end();
-            }
+        }
     }  
 }
 
 function postMessage(num) {
     var url, options, body, botReq;
 
-    url =  urlArray[num];
+    url = urlArray[num];
     
     options = {
         hostname: 'api.groupme.com',
@@ -55,7 +55,7 @@ function postMessage(num) {
         "text": url
     };
 
-    console.log(urlArray);
+    console.log(num, urlArray);
     console.log('sending ' + url + ' to ' + botID);
 
     botReq = HTTPS.request(options, function(res) {
