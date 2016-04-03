@@ -55,6 +55,7 @@ function postMessage(num) {
         "text": url
     };
 
+    console.log(url);
     console.log('sending ' + url + ' to ' + botID);
 
     botReq = HTTPS.request(options, function(res) {
