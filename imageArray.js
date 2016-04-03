@@ -15,7 +15,7 @@ var imageArray = [
 	'http://imgur.com/GQegrr6',
 	'http://imgur.com/GQegrr6',
 	'http://imgur.com/ZhkmhKF',
-	'http://imgur.com/Wyag4w1';
+	'http://imgur.com/Wyag4w1'
 ]
 
 module.exports = urlArray;
