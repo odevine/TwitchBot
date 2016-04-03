@@ -25,13 +25,13 @@ function respond() {
     /WutFace/i);
 
     //every time a regex is true, pass the true onto the boolean array
-    for (var i = 0; i < regexArray.length; i++) {
-        if(request.text && regexArray[i].test(request.text)) {
-            console.log(regexArray[i]);
+    for (var num = 0; num < regexArray.length; num++) {
+        if(request.text && regexArray[num].test(request.text)) {
+            console.log(regexArray[num]);
             this.res.writeHead(200);
             // wait at least 500ms before posting
             setTimeout(function() {
-                postMessage(n);
+                postMessage(num);
                 console.log('posted!');
             }, 500);
             this.res.end();
