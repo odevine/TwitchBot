@@ -6,8 +6,7 @@ function respond() {
     //get message
     var request = JSON.parse(this.req.chunks[0]);
     //initialize regex array
-    var regexArray = new Array();
-    regexArray = [
+    var regexArray = new Array(
     /4Head/i,
     /BabyRage/i,
     /DansGame/i,
@@ -23,7 +22,7 @@ function respond() {
     /NotLikeThis/i,
     /PogChamp/i,
     /ResidentSleeper/i,
-    /WutFace/i];
+    /WutFace/i);
 
     //every time a regex is true, pass the true onto the boolean array
     for (var i = 0; i < regexArray.length; i++) {

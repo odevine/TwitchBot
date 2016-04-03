@@ -1,4 +1,4 @@
-var urlArray = [
+var urlArray = new Array(
 
 	'http://imgur.com/isk7S1C',
 	'http://imgur.com/2M5rKpu',
@@ -16,6 +16,6 @@ var urlArray = [
 	'http://imgur.com/GQegrr6',
 	'http://imgur.com/ZhkmhKF',
 	'http://imgur.com/Wyag4w1'
-]
+);
 
 module.exports = urlArray;
