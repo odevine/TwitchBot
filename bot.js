@@ -4,9 +4,9 @@ var HTTPS = require('https'),
 
 function respond() {
     //get message
-    var request = JSON.parse(this.req.chunks[0]),
+    var request = JSON.parse(this.req.chunks[0]);
     //initialize regex array
-    regexArray = [
+    var regexArray = [
     /4Head/i,
     /BabyRage/i,
     /DansGame/i,
