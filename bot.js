@@ -26,12 +26,12 @@ function respond() {
 
     //every time a regex is true, pass the true onto the boolean array
     for (var i = 0; i < regexArray.length; i++) {
-        console.log(regexArray[i]);
         if(request.text && regexArray[i].test(request.text)) {
+            console.log(regexArray[i]);
             this.res.writeHead(200);
             // wait at least 500ms before posting
             setTimeout(function() {
-                postMessage(1);
+                postMessage(i);
                 console.log('posted!');
             }, 500);
             this.res.end();
@@ -55,7 +55,7 @@ function postMessage(num) {
         "text": url
     };
 
-    console.log(num, urlArray);
+    console.log(num + " being called");
     console.log('sending ' + url + ' to ' + botID);
 
     botReq = HTTPS.request(options, function(res) {
