@@ -52,11 +52,7 @@ function postMessage(num) {
 
     body = {
         "bot_id": botID,
-        "text": "",
-        "attachments" : [{
-            "type"  : "image",
-            "url"   : url
-        }]
+        "text": url
     };
 
     console.log('sending ' + url + ' to ' + botID);
