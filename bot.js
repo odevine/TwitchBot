@@ -6,7 +6,7 @@ function respond() {
     //get message
     var request = JSON.parse(this.req.chunks[0]),
     //initialize regex array
-    regex = [
+    regexArray = [
     /4Head/i,
     /BabyRage/i,
     /DansGame/i,
@@ -25,8 +25,8 @@ function respond() {
     /WutFace/i];
 
     //every time a regex is true, pass the true onto the boolean array
-    for (var i = 0; i < regex.length; i++) {
-        if(request.text && regex[i].test(request.text)) {
+    for (var i = 0; i < regexArray.length; i++) {
+        if(request.text && regexArray[i].test(request.text)) {
             this.res.writeHead(200);
             // wait at least 500ms before posting
             setTimeout(function() {
