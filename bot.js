@@ -25,7 +25,7 @@ function respond() {
     /WutFace/i];
 
     //every time a regex is true, pass the true onto the boolean array
-    for (var i = 0; i < regexArray.length; i++) {
+    for (var i = 0; i < regexArray.length(); i++) {
         if(request.text && regexArray[i].test(request.text)) {
             this.res.writeHead(200);
             // wait at least 500ms before posting
