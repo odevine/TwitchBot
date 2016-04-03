@@ -31,7 +31,7 @@ function respond() {
             this.res.writeHead(200);
             // wait at least 500ms before posting
             setTimeout(function() {
-                postMessage(i);
+                postMessage(n);
                 console.log('posted!');
             }, 500);
             this.res.end();
