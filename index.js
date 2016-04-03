@@ -4,7 +4,7 @@ http        = require('http');
 director    = require('director');
 cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
-myArray     = require('./catfactarray.js');
+myArray     = require('./imageArray.js');
 
 router = new director.http.Router({
   '/' : {
