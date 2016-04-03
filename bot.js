@@ -28,7 +28,7 @@ function respond() {
     for (var i = 0; i < regexArray.length; i++) {
         if(request.text && regexArray[i].test(request.text)) {
             console.log(regexArray[i] + i);
-            this.res.writeHead(200);
+            
             // wait at least 500ms before posting to avoid overpost error
             setTimeout(function() {
                 console.log(i);
@@ -37,7 +37,8 @@ function respond() {
             }, 500);
             this.res.end();
         }
-    }  
+    } 
+    this.res.writeHead(200); 
 }
 
 function postMessage(num) {
