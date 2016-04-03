@@ -1,8 +1,7 @@
-var http, director, cool, bot, router, server, port, array;
+var http, director, bot, router, server, port, array;
 
 http        = require('http');
 director    = require('director');
-cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 urlArray     = require('./imageArray.js');
 
@@ -30,5 +29,5 @@ server.listen(port);
 
 function ping() {
   this.res.writeHead(200);
-  this.res.end("Hey, I'm Cool Guy.");
+  this.res.end("Up and running!");
 }

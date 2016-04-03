@@ -27,31 +27,22 @@ function respond() {
     //every time a regex is true, pass the true onto the boolean array
     for (var i = 0; i < regexArray.length; i++) {
         if(request.text && regexArray[i].test(request.text)) {
-            console.log(regexArray[i] + " " + i);
-            
-            // wait at least 500ms before posting to avoid overpost error
-            //setTimeout(function() {
-                console.log(i);
-                postMessage(i);
-                console.log('posted!');
-            //}, 500);
+            console.log(regexArray[i] + " : posting message " + i);
+            postMessage(i);
+            console.log('posted!');
             this.res.end();
         }
     } 
-    //this.res.writeHead(200); 
 }
 
 function postMessage(num) {
     var url, options, body, botReq;
-
     url = urlArray[num];
-    
     options = {
         hostname: 'api.groupme.com',
         path: '/v3/bots/post',
         method: 'POST'
     };
-
     body = {
         "bot_id": botID,
         "text": url
